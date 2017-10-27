@@ -1,0 +1,63 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+html, body {
+  background-image: url('/images/ball_background_opaque.png');
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.logo {
+  display: inline-block;
+  height: 100%;
+}
+
+img {
+  /*vertical-align: middle*/
+  width: 70%;
+  height: 70%;
+  padding-top: 10px;
+}
+
+#container {
+  height: 100%;
+  position: relative;
+}
+
+#header {}
+
+a {
+  color: black !important;
+}
+
+#section {
+  margin: auto !important;
+  width: 60% !important;
+  background-color: white !important;
+  opacity: 0.4 !important;
+  height: 75%;
+}
+
+#inside {
+  margin-top: 7%;
+}
+
+td {
+  font-size: 18px;
+  padding: 10px !important;
+}

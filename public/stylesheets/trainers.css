@@ -1,0 +1,48 @@
+
+
+html, body {
+  background-image: url('/images/ball_background_opaque.png');
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.logo {
+  display: inline-block;
+  height: 100%;
+}
+
+img {
+  /*vertical-align: middle*/
+  width: 70%;
+  height: 70%;
+  padding-top: 10px;
+}
+
+#container {
+  height: 100%;
+  position: relative;
+}
+
+#header {}
+
+a {
+  color: black !important;
+}
+
+#section {
+  margin: auto !important;
+  width: 60% !important;
+  background-color: white !important;
+  opacity: 0.4 !important;
+  height: 30%;
+}
+
+#inside {
+  margin-top: 25%;
+}
+
+td {
+  font-size: 18px;
+  padding: 10px !important;

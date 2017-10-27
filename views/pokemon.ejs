@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel='stylesheet' href='/stylesheets/pokemon.css' />
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <meta charset="utf-8">
+  <title>Pokemon</title>
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <div class="navbar-fixed">
+        <nav class="fafafa grey lighten-5">
+          <div class="container" id="nav">
+            <div class="nav-wrapper">
+              <a href="" class="logo">
+                    <img src="/images/pokemon-logo.png" alt="1">
+                </a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="/pokemon">POKEMON</a></li>
+                <li><a href="/trainers">TRAINERS</a></li>
+                <li><a href="#Link3">GYM</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  <div id="section">
+ <div id="inside" href= "/pokemon">
+   <table>
+       <thead>
+         <tr>
+           <th>ID</th>
+           <th>Name</th>
+           <th>Trainer ID</th>
+           <th>Combat power</th>
+         </tr>
+       </thead>
+       <tbody>
+         <% for(let i = 0; i<pokemon.length; i++){ %>
+          <tr>
+            <td><%= pokemon[i].id %></td>
+            <td><%= pokemon[i].name %></td>
+            <td><%= pokemon[i].trainer_id %></td>
+            <td><%= pokemon[i].cp %></td>
+            <td><a href="">Assign to gym</a></td>
+            <td><a href="">Edit</a></td>
+            <td><a href="">Remove</a></td>
+          </tr>
+        <% } %>
+         </tbody>
+
+     </table>
+</div>
+  </div>
+</body>
+
+</html>
