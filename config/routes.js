@@ -12,6 +12,8 @@ module.exports = function(app){
 
   app.get('/pokemon', pokemon.main);
 
+  app.get('/pokemon/:id', pokemon.getOne);
+
   app.get('/trainers', trainers.main);
 
 

@@ -1,31 +1,46 @@
 const knex = require('../db/knex.js');
 
 module.exports = {
-  index: function(req,res){
+  index: function(req, res) {
     res.redirect('/pokemon');
   },
-  form: function(req, res){
+  form: function(req, res) {
     res.render('makepokemon')
   },
   main: function(req, res, next) {
-    knex('pokemon').then((result)=>{
-      console.log(result)
-   res.render('pokemon', { title: 'Express', pokemon: result});
- })
- },
-  create: function(req,res){
+    knex('pokemon').then((result) => {
+      res.render('pokemon', {
+        title: 'Express',
+        pokemon: result
+      });
+    })
+  },
+  create: function(req, res) {
     knex('pokemon')
-    .insert({
+      .insert({
         name: req.body.name,
         trainer_id: req.body.trainer_id,
         cp: req.body.cp
       }, "*")
-      .then((result)=>{
-        console.log(result);
+      .then((result) => {
         res.redirect("/pokemon")
       })
       .catch((err) => {
         console.error(err)
       });
-  }
+  },
+  getOne: function(req, res) {
+    knex('pokemon')
+    .where('id', req.params.id)
+    .then((result) => {
+      var pokemonid = result[0].trainer_id
+      console.log(pokemonid)
+    knex('trainers')
+    .where('id', pokemonid)
+    .then((results) => {
+      console.log(results)
+    res.render('pokemonprofile', {pokemon: result[0], trainer: results})
+  })
+  })
+},
 };

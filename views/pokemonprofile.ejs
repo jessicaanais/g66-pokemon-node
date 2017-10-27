@@ -2,14 +2,14 @@
 <html>
 
 <head>
-  <link rel='stylesheet' href='/stylesheets/pokemon.css' />
+  <link rel='stylesheet' href='/stylesheets/pokemonprofile.css' />
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <meta charset="utf-8">
-  <title>Pokemon</title>
+  <title><%= pokemon.name%></title>
 </head>
 
 <body>
@@ -33,32 +33,16 @@
       </div>
     </div>
   <div id="section">
- <div id="inside" href= "/pokemon">
-   <table>
-       <thead>
-         <tr>
-           <th>ID</th>
-           <th>Name</th>
-           <th>Trainer ID</th>
-           <th>Combat power</th>
-         </tr>
-       </thead>
-       <tbody>
-         <% for(let i = 0; i<pokemon.length; i++){ %>
-          <tr>
-            <td> <%= pokemon[i].id %></td>
-            <td><a href="/pokemon/<%= pokemon[i].id %>"><%= pokemon[i].name %></a></td>
-            <td><%= pokemon[i].trainer_id %></td>
-            <td><%= pokemon[i].cp %></td>
-            <td><a href="">Assign to gym</a></td>
-            <td><a href="">Edit</a></td>
-            <td><a href="">Remove</a></td>
-          </tr>
-        <% } %>
-         </tbody>
-     </table>
-     <a href="/makepokemon" class="button">Create New Pokemon</a>
+ <div id="inside" href= "">
+   <h2> <%=pokemon.name%> </h2>
+   <h3> ID: <%=pokemon.id%> </h3>
+   <h3> Combat Power: <%=pokemon.cp%> </h3>
+   <% for(let i = 0; i<trainer.length; i++){ %>
+     <h3> Trainer: <%=trainer[i].name%> </h3>
+<% } %>
+
 </div>
+
   </div>
 </body>
 
