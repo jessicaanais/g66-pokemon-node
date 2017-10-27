@@ -6,9 +6,14 @@ module.exports = function(app){
 
   app.get('/', pokemon.index);
 
+  app.get('/makepokemon', pokemon.form);
+
+  app.post('/makepokemon', pokemon.create);
+
   app.get('/pokemon', pokemon.main);
 
   app.get('/trainers', trainers.main);
+
 
 
 }

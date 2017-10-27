@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <link rel='stylesheet' href='/stylesheets/pokemon.css' />
+  <link rel='stylesheet' href='/stylesheets/makepokemon.css' />
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
@@ -33,31 +33,13 @@
       </div>
     </div>
   <div id="section">
- <div id="inside" href= "/pokemon">
-   <table>
-       <thead>
-         <tr>
-           <th>ID</th>
-           <th>Name</th>
-           <th>Trainer ID</th>
-           <th>Combat power</th>
-         </tr>
-       </thead>
-       <tbody>
-         <% for(let i = 0; i<pokemon.length; i++){ %>
-          <tr>
-            <td><%= pokemon[i].id %></td>
-            <td><%= pokemon[i].name %></td>
-            <td><%= pokemon[i].trainer_id %></td>
-            <td><%= pokemon[i].cp %></td>
-            <td><a href="">Assign to gym</a></td>
-            <td><a href="">Edit</a></td>
-            <td><a href="">Remove</a></td>
-          </tr>
-        <% } %>
-         </tbody>
-     </table>
-     <a href="/makepokemon" class="button">Create New Pokemon</a>
+ <div id="inside" href= "/makepokemon">
+   <form class="" action="/makepokemon" method="post">
+     <input type="text" name="name" placeholder="name">
+      <input type="number" name="trainer_id" placeholder="trainer_id">
+      <input type="number" name="cp" placeholder="cp">
+      <input type="submit" value="Create">
+   </form>
 </div>
   </div>
 </body>
