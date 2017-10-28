@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <link rel='stylesheet' href='/stylesheets/pokemon.css' />
+  <link rel='stylesheet' href='/stylesheets/editpokemon.css' />
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
@@ -33,31 +33,26 @@
       </div>
     </div>
   <div id="section">
- <div id="inside" href= "/pokemon">
-   <table>
-       <thead>
-         <tr>
-           <th>ID</th>
-           <th>Name</th>
-           <th>Trainer ID</th>
-           <th>Combat power</th>
-         </tr>
-       </thead>
-       <tbody>
-         <% for(let i = 0; i<pokemon.length; i++){ %>
-          <tr>
-            <td> <%= pokemon[i].id %></td>
-            <td><a href="/pokemon/<%= pokemon[i].id %>"><%= pokemon[i].name %></a></td>
-            <td><%= pokemon[i].trainer_id %></td>
-            <td><%= pokemon[i].cp %></td>
-            <td><a href="">Assign to gym</a></td>
-            <td><a href="/edit/<%=pokemon[i].id%>">Edit</a></td>
-            <td><a href="">Remove</a></td>
-          </tr>
-        <% } %>
-         </tbody>
-     </table>
-     <a href="/makepokemon" class="button">Create New Pokemon</a>
+ <div id="inside" href= "/editpokemon">
+   <form class="form" action="/editpokemon" method="post">
+    Name: <input type="text" name="name" placeholder="<%=pokemon.name%>">
+    Trainer ID:<input type="number" name="trainer_id" placeholder="<%=pokemon.trainer_id%>">
+    Combat Power:<input type="number" name="cp" placeholder="<%=pokemon.cp%>">
+      <input class="buttonn"type="submit" value="Edit">
+   </form>
+   <h4>Trainers:</h4>
+   <select>
+     <% for(let i = 0; i<trainer.length; i++){ %>
+  <option value='<%=trainer[i].id%>'><%=trainer[i].name%></option>
+  <% } %>
+  <% for(let i = 0; i<trainers.length; i++){ %>
+    <% if(trainers[i].id != pokemon.trainer_id){ %>
+      <option value=""><%=trainers[i].name%></option>
+  <% } %>
+  <% } %>
+
+</select>
+
 </div>
   </div>
 </body>

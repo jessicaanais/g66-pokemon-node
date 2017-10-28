@@ -43,4 +43,21 @@ module.exports = {
   })
   })
 },
+  edit: function(req, res){
+    knex('pokemon')
+    .where('id', req.params.id)
+    .then((result) => {
+      var pokemonid = result[0].trainer_id
+      console.log(pokemonid)
+    knex('trainers')
+    .where('id', pokemonid)
+    .then((results) => {
+    knex('trainers')
+    .then((trainerresult)=>{
+    res.render('editpokemon', {pokemon: result[0], trainer: results, trainers: trainerresult})
+    })
+  })
+  })
+  },
+
 };
