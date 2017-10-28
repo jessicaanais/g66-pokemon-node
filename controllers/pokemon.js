@@ -69,6 +69,19 @@ update: function(req, res){
     .catch((err) => {
       console.error(err)
     });
-}
+},
+delete: function(req, res){
+
+    knex('pokemon')
+      .del()
+      .where('id', req.params.id)
+      .then(()=>{
+
+        res.redirect('/pokemon');
+      })
+      .catch((err) => {
+        console.error(err)
+      });
+  }
 
 };

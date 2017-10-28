@@ -18,6 +18,8 @@ module.exports = function(app){
 
   app.post('/update/:id', pokemon.update);
 
+  app.get('/delete/:id', pokemon.delete);
+
   app.get('/trainers', trainers.main);
 
 

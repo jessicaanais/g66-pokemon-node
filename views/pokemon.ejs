@@ -54,7 +54,7 @@
             <td><%= pokemon[i].in_gym %></td>
             <td><a href="">Assign to gym</a></td>
             <td><a href="/edit/<%=pokemon[i].id%>">Edit</a></td>
-            <td><a href="">Remove</a></td>
+            <td><a href="/delete/<%= pokemon[i].id %>">Delete</a></td>
           </tr>
         <% } %>
          </tbody>
