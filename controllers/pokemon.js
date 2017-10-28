@@ -34,7 +34,6 @@ module.exports = {
     .where('id', req.params.id)
     .then((result) => {
       var pokemonid = result[0].trainer_id
-      console.log(pokemonid)
     knex('trainers')
     .where('id', pokemonid)
     .then((results) => {
@@ -48,7 +47,6 @@ module.exports = {
     .where('id', req.params.id)
     .then((result) => {
       var pokemonid = result[0].trainer_id
-      console.log(pokemonid)
     knex('trainers')
     .where('id', pokemonid)
     .then((results) => {
@@ -58,6 +56,19 @@ module.exports = {
     })
   })
   })
-  },
+},
+update: function(req, res){
+  knex('pokemon')
+    .where('id', req.params.id)
+    .update(req.body, "*")
+    .then((result)=>{
+      console.log(result)
+
+      res.redirect('/pokemon');
+    })
+    .catch((err) => {
+      console.error(err)
+    });
+}
 
 };

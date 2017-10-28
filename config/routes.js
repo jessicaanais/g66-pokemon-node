@@ -16,7 +16,7 @@ module.exports = function(app){
 
   app.get('/edit/:id', pokemon.edit);
 
-  // app.post('/edit/:id', pokemon.editOne);
+  app.post('/update/:id', pokemon.update);
 
   app.get('/trainers', trainers.main);
 

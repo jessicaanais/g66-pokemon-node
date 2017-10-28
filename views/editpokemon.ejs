@@ -34,11 +34,12 @@
     </div>
   <div id="section">
  <div id="inside" href= "/editpokemon">
-   <form class="form" action="/editpokemon" method="post">
-    Name: <input type="text" name="name" placeholder="<%=pokemon.name%>">
-    Trainer ID:<input type="number" name="trainer_id" placeholder="<%=pokemon.trainer_id%>">
-    Combat Power:<input type="number" name="cp" placeholder="<%=pokemon.cp%>">
-      <input class="buttonn"type="submit" value="Edit">
+   <form class="form" action="/update/<%= pokemon.id %>" method="post">
+    Name: <input type="text" name="name" value="<%=pokemon.name%>">
+    Trainer ID:<input type="number" name="trainer_id" value="<%=pokemon.trainer_id%>">
+    Gym: <input type="text" name="in_gym" value="<%=pokemon.in_gym%>">
+    Combat Power:<input type="number" name="cp" value="<%=pokemon.cp%>">
+      <input class="buttonn"type="submit" value="Update">
    </form>
    <h4>Trainers:</h4>
    <select>
