@@ -17,4 +17,7 @@ add: function(req, res){
     res.redirect('/gym')
   })
 },
+  battle: function(req, res){
+    res.render('battle');
+  }
 }

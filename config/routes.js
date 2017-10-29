@@ -27,6 +27,8 @@ module.exports = function(app){
 
   app.get('/gym', gym.index);
 
+  app.get('/gym/battle', gym.battle)
+
   // app.get('/pokemon/add/:id', gym.add);
 
 

@@ -1,15 +1,14 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-  <link rel='stylesheet' href='/stylesheets/gym.css' />
+  <link rel='stylesheet' href='/stylesheets/battle.css' />
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <meta charset="utf-8">
-  <title>Pokemon</title>
+  <title>Trainer</title>
 </head>
 
 <body>
@@ -33,24 +32,16 @@
       </div>
     </div>
   <div id="section">
- <div id="inside" href= "/gym">
-   <h2>Gym</h2>
-   <hr>
-   <h4>Pokemon 1:</h4>
-   <select>
-     <% for(let i = 0; i<pokemon.length; i++){ %>
-   Pokemon 1<option value=""> <%=pokemon[i].name%></option>
-  <% } %>
-  </select>
-    <h4>Pokemon 2:</h4>
-  <select class="" name="">
-    <% for(let i = 0; i<pokemon.length; i++){ %>
-<option value=""><%=pokemon[i].name%></option>
- <% } %>
-  </select>
-   <button type="button" name="BATTLE"><a href="/gym/battle">Add to gym</a></button>
-
+ <div id="inside" href= "">
+    <h2>BATTLE</h2>
+    <h3>Pokemon 1: </h3>
+    <h3>Pokemon 2: </h3>
+    <button type="button" name="button">BATTLE</button>
+    <h3> Winner: </h3>
+    <button type="button" name="button">RESET GYM</button>
 </div>
+
+
   </div>
 </body>
 
