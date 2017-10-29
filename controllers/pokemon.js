@@ -9,10 +9,8 @@ module.exports = {
   },
   main: function(req, res, next) {
     knex('pokemon').then((result) => {
-      res.render('pokemon', {
-        title: 'Express',
-        pokemon: result
-      });
+
+      res.render('pokemon', { title: 'Express', pokemon: result, assigned: req.session.deck});
     })
   },
   create: function(req, res) {

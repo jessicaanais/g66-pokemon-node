@@ -1,15 +1,14 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-  <link rel='stylesheet' href='/stylesheets/trainers.css' />
+  <link rel='stylesheet' href='/stylesheets/trainerprofile.css' />
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <meta charset="utf-8">
-  <title>Trainers</title>
+  <title>Trainer</title>
 </head>
 
 <body>
@@ -25,7 +24,7 @@
               <ul class="right hide-on-med-and-down">
                 <li><a href="/pokemon">POKEMON</a></li>
                 <li><a href="/trainers">TRAINERS</a></li>
-                <li><a href="/gym">GYM</a></li>
+                <li><a href="#Link3">GYM</a></li>
               </ul>
             </div>
           </div>
@@ -33,13 +32,13 @@
       </div>
     </div>
   <div id="section">
- <div id="inside" href= "/trainers">
-   <h2> Trainers </h2>
-   <hr>
-   <% for(let i = 0; i<trainers.length; i++){ %>
-   <h4><a href="/trainer/<%=trainers[i].id%>"><%=trainers[i].name%></a></h4>
+ <div id="inside" href= "">
+   <% for(let i = 0; i<trainer.length; i++){ %>
+     <h2> <%=trainer[i].name%></a> </h2>
 <% } %>
+ <h3> Currently training:</h3>
 </div>
+
   </div>
 </body>
 

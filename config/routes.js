@@ -1,6 +1,7 @@
 //Update the name of the controller below and rename the file.
 const pokemon = require("../controllers/pokemon.js");
 const trainers = require("../controllers/trainers.js");
+const gym = require("../controllers/gym.js");
 
 module.exports = function(app){
 
@@ -21,6 +22,12 @@ module.exports = function(app){
   app.get('/delete/:id', pokemon.delete);
 
   app.get('/trainers', trainers.main);
+
+  app.get('/trainer/:id', trainers.getOne);
+
+  app.get('/gym', gym.index);
+
+  // app.get('/pokemon/add/:id', gym.add);
 
 
 
